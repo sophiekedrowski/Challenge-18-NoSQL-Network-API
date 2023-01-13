@@ -53,7 +53,7 @@ module.exports = {
             .then((user) =>
                 !user
                     ? res.status(404).json({ message: 'Cannot find user with that ID, please try again' })
-                    : res.json(user)
+                    : user.delete({ _id: { $in: user } })
             )
             .then(() => res.json({ message: 'User deleted' }))
             .catch((err) => res.status(500).json(err));
