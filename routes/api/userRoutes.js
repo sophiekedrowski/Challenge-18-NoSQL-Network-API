@@ -11,11 +11,6 @@ router.route('/').get(getUsers).post(createUser);
 router.route('/:userId').get(getSingleUser);
 router.route('/:userId').delete(deleteUser);
 
-// router
-//   .route('/:userId')
-//   .get(getSingleCourse)
-//   .put(updateCourse)
-//   .delete(deleteCourse);
 
 module.exports = router;
 

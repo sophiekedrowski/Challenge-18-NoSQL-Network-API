@@ -36,6 +36,7 @@ module.exports = {
 
 
     //PUT route to update a user by ID
+    //this one needs to be fixed
     updateUser(req, res) {
         User.findOneAndUpdate({ _id: req.params.userId })
             .then((user) =>
